@@ -1,0 +1,9 @@
+name: model_test
+description: Basic test template for a model class with copyWith and json serialization
+version: 0.0.1
+vars:
+  name:
+    type: string
+    description: name of the model to test
+    default: User
+    prompt: What is the name of the model class?

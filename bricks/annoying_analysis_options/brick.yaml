@@ -1,0 +1,3 @@
+name: annoying_analysis_options
+description: Strict analysis options combining rules from very_good_analysis and dart_code_metrics
+version: 0.0.1

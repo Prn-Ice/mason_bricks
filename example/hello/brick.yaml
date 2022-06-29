@@ -1,0 +1,9 @@
+name: hello
+description: foo
+version: 0.0.1
+vars:
+  name:
+    type: string
+    description: Your name
+    default: Dash
+    prompt: What is your name?

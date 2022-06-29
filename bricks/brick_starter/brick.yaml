@@ -1,0 +1,19 @@
+name: brick_starter
+description: A brick that generates a basic brick with a yaml config and a single file
+version: 0.0.1
+vars:
+  name:
+    type: string
+    description: The name of the brick to be created
+    default: basic
+    prompt: What is the name of this brick?
+  description:
+    type: string
+    description: A brief description of the brick to be created
+    default: A very good brick
+    prompt: Description?
+  author:
+    type: string
+    description: The author of the brick, thats you
+    default: me
+    prompt: Who is the author of this brick?
