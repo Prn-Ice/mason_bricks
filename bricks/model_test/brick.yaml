@@ -1,6 +1,8 @@
 name: model_test
 description: Basic test template for a model class with copyWith and json serialization
 version: 0.0.1
+repository: https://github.com/Prn-Ice/mason_bricks/tree/main/bricks/model_test
+
 vars:
   name:
     type: string

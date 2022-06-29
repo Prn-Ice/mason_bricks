@@ -1,4 +1,4 @@
-Model test
+# Model test
 
 A brick that generates a test file for a standard model class that supports `copyWith`, `fromJson` and `toJson`.
 

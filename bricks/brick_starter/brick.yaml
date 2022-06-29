@@ -1,6 +1,8 @@
 name: brick_starter
 description: A brick that generates a basic brick with a yaml config and a single file
 version: 0.0.1
+repository: https://github.com/Prn-Ice/mason_bricks/tree/main/bricks/brick_starter
+
 vars:
   name:
     type: string
