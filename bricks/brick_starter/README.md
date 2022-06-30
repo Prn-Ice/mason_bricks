@@ -7,7 +7,7 @@ A brick that generates a basic brick.
 ## How to use 🚀
 
 ```sh
-mason make brick_starter --name hello --description foo --author bar
+mason make brick_starter --name hello --description foo --author bar --hooks true
 ```
 
 
@@ -19,6 +19,7 @@ mason make brick_starter --name hello --description foo --author bar
 | `name`        | The name of the brick            | basic             | `string` |
 | `description` | A brief description of the brick | A very good brick | `string` |
 | `author`      | The author of the brick          | me                | `string` |
+| `hooks`      | Use Hooks          | true                | `boolean` |
 
 
 
@@ -31,5 +32,9 @@ name
 ├── README.md
 ├── __brick__
 │   └── HELLO.md
+├── hooks
+│   |── post_gen.dart
+│   |── pre_gen.dart
+│   └── pubspec.yaml
 └── brick.yaml
 ```
