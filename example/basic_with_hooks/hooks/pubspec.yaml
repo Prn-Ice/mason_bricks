@@ -1,0 +1,4 @@
+name: basic_with_hooks
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"

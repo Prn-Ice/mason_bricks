@@ -19,3 +19,8 @@ vars:
     description: The author of the brick, thats you
     default: me
     prompt: Who is the author of this brick?
+  hooks:
+    type: boolean
+    description: Use Hooks
+    default: true
+    prompt: Want to use Hooks?
