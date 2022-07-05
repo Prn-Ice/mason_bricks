@@ -26,6 +26,7 @@ My collection of bricks to help you build projects faster or nothing else will ð
 | basic_dart_service_package                                   | Coming soon...                                               | N/A     |
 | basic_flutter_service_package                                | Coming soon...                                               | N/A     |
 | heavy_app                                                    | Coming soon...                                               | N/A     |
+| form_bloc                                                    | Coming soon...                                               | N/A     |
 
 ## Documentation
 
