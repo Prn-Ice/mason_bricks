@@ -1,6 +1,6 @@
 name: brick_starter
 description: A brick that generates a basic brick with a yaml config and a single file
-version: 0.0.1
+version: 0.2.0
 repository: https://github.com/Prn-Ice/mason_bricks/tree/main/bricks/brick_starter
 
 vars:
@@ -19,3 +19,8 @@ vars:
     description: The author of the brick, thats you
     default: me
     prompt: Who is the author of this brick?
+  hooks:
+    type: boolean
+    description: Whether or not hooks should be generated for this brick
+    default: true
+    prompt: Do you want to use hooks?
