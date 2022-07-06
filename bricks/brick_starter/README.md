@@ -19,7 +19,7 @@ mason make brick_starter --name hello --description foo --author bar --hooks tru
 | `name`        | The name of the brick            | basic             | `string` |
 | `description` | A brief description of the brick | A very good brick | `string` |
 | `author`      | The author of the brick          | me                | `string` |
-| `hooks`      | Use Hooks          | true                | `boolean` |
+| `hooks`      | Whether or not hooks should be generated for this brick | true                | `boolean` |
 
 
 
