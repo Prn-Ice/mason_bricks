@@ -1,0 +1,20 @@
+name: {{service_name.snakeCase()}}
+description: {{service_description}}
+version: 1.0.0+1
+publish_to: none
+
+environment:
+  sdk: ">=2.16.0 <3.0.0"
+
+dependencies:{{#flutter}}
+  flutter:
+    sdk: flutter{{/flutter}}{{#analysis}}
+  dart_code_metrics: ^4.16.0{{/analysis}}
+
+dev_dependencies:{{#notFlutter}}
+  coverage: ^1.4.0{{/notFlutter}}{{#flutter}}
+  flutter_test:
+    sdk: flutter{{/flutter}}
+  mocktail: ^0.3.0{{#notFlutter}}
+  test: ^1.21.2{{/notFlutter}}
+  very_good_analysis: ^3.0.1
