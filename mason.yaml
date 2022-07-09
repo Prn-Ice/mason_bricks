@@ -5,7 +5,7 @@ bricks:
     path: bricks/brick_starter
   model_test:
     path: bricks/model_test
-  heavy_dart_repository:
-    path: bricks/heavy_dart_repository
   heavy_service_package:
     path: bricks/heavy_service_package
+  heavy_repository_package:
+    path: bricks/heavy_repository_package

@@ -21,10 +21,8 @@ My collection of bricks to help you build projects faster or nothing else will ð
 | [annoying_analysis_options](https://brickhub.dev/bricks/annoying_analysis_options/0.0.1) | A brick create a very strict `analysis_options.yaml` file using `very_good_analysis` and `dart_code_metrics`. | 0.0.1   |
 | [model_test](https://brickhub.dev/bricks/model_test/0.0.1)   | A brick to create a test for a dart model class with a `copyWith`, `fromJson` and `toJson`. | 0.0.1   |
 | [brick_starter](https://brickhub.dev/bricks/brick_starter/0.2.0) | It's basically `mason new` with a few more options.          | 0.2.0   |
-| heavy_dart_repository                                        | Coming soon...                                               | N/A     |
-| heavy_flutter_repository                                     | Coming soon...                                               | N/A     |
-| basic_dart_service_package                                   | Coming soon...                                               | N/A     |
-| basic_flutter_service_package                                | Coming soon...                                               | N/A     |
+| [heavy_service_package](https://brickhub.dev/bricks/heavy_service_package/0.0.1) | A brick to create your service package including methods, models, tests, and more! | 0.0.1   |
+| heavy_repository_package                                     | Coming soon...                                               | N/A     |
 | heavy_app                                                    | Coming soon...                                               | N/A     |
 | form_bloc                                                    | Coming soon...                                               | N/A     |
 
@@ -33,6 +31,7 @@ My collection of bricks to help you build projects faster or nothing else will ð
 - [annoying_analysis_options](https://github.com/Prn-Ice/mason_bricks/tree/main/bricks/annoying_analysis_options)
 - [model_test](https://github.com/Prn-Ice/mason_bricks/tree/main/bricks/model_test)
 - [brick_starter](https://github.com/Prn-Ice/mason_bricks/tree/main/bricks/brick_starter)
+- [heavy_service_package](https://github.com/Prn-Ice/mason_bricks/tree/main/bricks/heavy_service_package)
 
 ## Maintainers
 
