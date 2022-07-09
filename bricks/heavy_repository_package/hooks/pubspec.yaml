@@ -1,0 +1,4 @@
+name: heavy_repository_package
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"

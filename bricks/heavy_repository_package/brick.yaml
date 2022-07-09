@@ -1,0 +1,9 @@
+name: heavy_repository_package
+description: A brick that generates a repository package with an api client, data persistence and more.
+version: 0.0.1
+vars:
+  name:
+    type: string
+    description: Your name
+    default: Dash
+    prompt: What is your name?
