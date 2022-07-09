@@ -1,6 +1,6 @@
 # Heavy Service Package
 
-A brick to create your service package including your methods, tests, and more! This package is highly inspired(stolen 😃) by [Service Package](https://github.com/LukeMoody01/mason_bricks/tree/master/bricks/service_package).
+A brick to create your service package including your methods, tests, and more! This package is highly inspired by(stolen from 😃) [Service Package](https://github.com/LukeMoody01/mason_bricks/tree/master/bricks/service_package).
 
 This brick makes use of the MasonGenerator and wraps 1 other brick (annoying_analysis_options) to create a fully fledged package with tests already pre generated!
 
