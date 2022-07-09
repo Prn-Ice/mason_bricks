@@ -1,7 +1,7 @@
 name: heavy_service_package
 description: A brick to create your service package including methods, models, tests, and more!
-version: 0.0.1
-repository: https://github.com/Prn-Ice/mason_bricks/tree/main/bricks/heavy_flutter_service_package
+version: 0.0.2
+repository: https://github.com/Prn-Ice/mason_bricks/tree/main/bricks/heavy_service_package
 
 vars:
   service_name:
