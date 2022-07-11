@@ -1,9 +1,26 @@
 name: heavy_repository_package
 description: A brick that generates a repository package with an api client, data persistence and more.
 version: 0.0.1
+repository: https://github.com/Prn-Ice/mason_bricks/tree/main/bricks/heavy_repository_package
+
 vars:
-  name:
+  package_name:
     type: string
-    description: Your name
-    default: Dash
-    prompt: What is your name?
+    description: The name of the repository
+    default: Repository
+    prompt: What is the repositories's name?
+  package_description:
+    type: string
+    description: This repositories's description
+    default: A default package description
+    prompt: What is the repositories's description?
+  flutter:
+    type: boolean
+    default: false
+    description: Whether this service should depend on flutter
+    prompt: Is this service a flutter package?
+  analysis:
+    type: boolean
+    default: false
+    description: Whether this service should use the annoying_analysis_options brick
+    prompt: Do you want extra annoying analysis options in this service?

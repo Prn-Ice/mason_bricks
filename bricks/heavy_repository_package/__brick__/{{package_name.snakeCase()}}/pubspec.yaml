@@ -1,0 +1,40 @@
+name: {{package_name.snakeCase()}}
+description: {{package_description}}
+version: 1.0.0+1
+publish_to: none
+
+environment:
+  sdk: ">=2.16.0 <3.0.0"
+
+dependencies:{{#analysis}}
+  dart_code_metrics: ^4.16.0{{/analysis}}
+  dio: ^4.0.6
+  fpdart: ^0.1.0{{#flutter}}
+  flutter:
+    sdk: flutter{{/flutter}}
+  json_annotation: ^4.6.0
+  json_serializable: ^6.3.1
+  retrofit: ^3.0.1+1
+  rxdart: ^0.27.4
+  stash: ^4.3.0
+  stash_objectbox: ^4.3.0
+
+dependency_overrides: 
+  # fix for https://github.com/rrousselGit/freezed/issues/700
+  analyzer: ">=4.2.0 <5.0.0"{{#flutter}}
+  # these are a fix for https://github.com/ivoleitao/stash/issues/34
+  async: 2.8.2
+  clock: 1.1.0
+  meta: 1.7.0
+  path: 1.8.1{{/flutter}}
+
+dev_dependencies:{{#notFlutter}}
+  build_runner: ^2.1.11
+  coverage: ^1.5.0{{/notFlutter}}{{#flutter}}
+  flutter_test:
+    sdk: flutter{{/flutter}}
+  freezed: ^2.0.4
+  mocktail: ^0.3.0
+  retrofit_generator: ^4.0.1{{#notFlutter}}
+  test: ^1.21.4{{/notFlutter}}
+  very_good_analysis: ^3.0.1
