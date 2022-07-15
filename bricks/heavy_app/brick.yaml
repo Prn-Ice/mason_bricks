@@ -1,0 +1,9 @@
+name: heavy_app
+description: A starter flutter app with routing, dependency injection, pre-commit hooks and more.
+version: 0.0.1
+vars:
+  name:
+    type: string
+    description: Your name
+    default: Dash
+    prompt: What is your name?
