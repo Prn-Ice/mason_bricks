@@ -1,6 +1,6 @@
 name: heavy_repository_package
 description: A brick that generates a repository package with an api client, data persistence and more.
-version: 0.1.1
+version: 0.1.2
 repository: https://github.com/Prn-Ice/mason_bricks/tree/main/bricks/heavy_repository_package
 
 vars:

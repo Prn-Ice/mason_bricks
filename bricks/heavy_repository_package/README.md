@@ -173,3 +173,23 @@ class MyRepository implements IMyRepository {
 }
 ```
 
+
+
+### Sample Usage in App
+
+```dart
+void main() {
+  // Create a store, 
+  // you can create multiple caches from one store.
+  final store = await newObjectboxLocalCacheStore();
+  // Create a cache for users.
+  final cache = await store.cache<User>(
+      name: 'user',
+      fromEncodable: User.fromJson,
+  );
+  
+  // Create a repository with cache.
+  final repository = MyRepository(cache: cache);
+}
+```
+
