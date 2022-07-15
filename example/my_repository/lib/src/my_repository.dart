@@ -10,7 +10,7 @@ part 'i_my_repository.dart';
 /// {@template my_repository}
 /// MyRepository description
 /// {@endtemplate}
-class MyRepository implements IMyRepository {
+class MyRepository implements IMyRepository { 
   /// {@macro my_repository}
   MyRepository({
     required Cache<User> cache,
@@ -22,7 +22,7 @@ class MyRepository implements IMyRepository {
   final MyRepositoryClient _client;
 
   @override
-  TaskEither<String, User> meUser() {
+  TaskEither<String, User> myUser() {
     //TODO: Add Logic
     return TaskEither<String, User>.tryCatch(
       () async {

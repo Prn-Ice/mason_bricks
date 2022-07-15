@@ -4,8 +4,8 @@ part of 'my_repository.dart';
 abstract class IMyRepository{ 
   static const String cacheKey = '__my_repository__';
   
-  /// A description for meUser
-  TaskEither<String, User> meUser();
+  /// A description for myUser
+  TaskEither<String, User> myUser();
   
 
   /// Cached data

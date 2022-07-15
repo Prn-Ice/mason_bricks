@@ -17,14 +17,14 @@ void main() {
       expect(MyRepository(cache: MockCache()), isNotNull);
     });
     
-    group('meUser', () {
+    group('myUser', () {
       test('executes happy flow', () async {
-        final someValue = myRepository.meUser();
+        final someValue = myRepository.myUser();
         //expect(someValue, equals(someValue));
       });
 
       test('executes edge flow', () async {
-        final someValue = myRepository.meUser();
+        final someValue = myRepository.myUser();
         //expect(someValue, equals(someValue));
       });
     });

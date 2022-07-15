@@ -7,7 +7,6 @@ abstract class I{{package_name.pascalCase()}}{
   /// A description for {{name}}
   TaskEither<String, {{{type}}}> {{name}}();
   {{/methods}}
-
   /// Cached data
   Future<User?> get userData;
 

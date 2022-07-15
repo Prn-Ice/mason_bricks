@@ -27,7 +27,7 @@ class {{package_name.pascalCase()}} implements I{{package_name.pascalCase()}} {
     return TaskEither<String, User>.tryCatch(
       () async {
         final response = await _client.getUser();
-        await _cache.put(IMyRepository.cacheKey, response);
+        await _cache.put(I{{package_name.pascalCase()}}.cacheKey, response);
 
         return response;
       },
