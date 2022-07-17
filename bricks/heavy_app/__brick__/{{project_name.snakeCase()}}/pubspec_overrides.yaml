@@ -1,0 +1,10 @@
+# melos_managed_dependency_overrides: async,clock,meta,path,auto_route_observer,bloc_logger
+dependency_overrides:
+  async: 2.8.2
+  clock: 1.1.0
+  meta: 1.7.0
+  path: 1.8.1
+  auto_route_observer:
+    path: packages/auto_route_observer
+  bloc_logger:
+    path: packages/bloc_logger

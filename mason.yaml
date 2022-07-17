@@ -9,3 +9,5 @@ bricks:
     path: bricks/heavy_service_package
   heavy_repository_package:
     path: bricks/heavy_repository_package
+  heavy_app:
+    path: bricks/heavy_app

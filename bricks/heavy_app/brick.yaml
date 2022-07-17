@@ -1,9 +1,21 @@
 name: heavy_app
-description: A starter flutter app with routing, dependency injection, pre-commit hooks and more.
-version: 0.0.1
+description: Core Very Good Flutter App
+version: 0.1.0+1
+environment:
+  mason: any
 vars:
-  name:
+  project_name:
     type: string
-    description: Your name
-    default: Dash
-    prompt: What is your name?
+    description: The project name
+    default: my_app
+    prompt: "What is the project name?"
+  org_name:
+    type: string
+    description: The organization name
+    default: com.example.app
+    prompt: "What is the organization name?"
+  description:
+    type: string
+    description: A short project description
+    default: A Very Good App
+    prompt: "What is the project description?"

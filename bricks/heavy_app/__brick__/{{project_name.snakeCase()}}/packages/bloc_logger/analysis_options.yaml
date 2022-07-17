@@ -1,0 +1,28 @@
+include: package:very_good_analysis/analysis_options.yaml
+linter:
+  rules:
+    public_member_api_docs: false
+analyzer:
+  plugins:
+    - dart_code_metrics
+  errors:
+    invalid_annotation_target: ignore
+    sort_pub_dependencies: ignore
+
+dart_code_metrics:
+  metrics:
+    cyclomatic-complexity: 20
+    number-of-parameters: 4
+    maximum-nesting-level: 5
+  rules:
+    - newline-before-return
+    - no-boolean-literal-compare
+    - no-empty-block
+    - prefer-trailing-comma
+    - prefer-conditional-expressions
+    - no-equal-then-else
+  anti-patterns:
+    - long-method:
+        exclude:
+          - test/**
+    - long-parameter-list

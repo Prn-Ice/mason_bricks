@@ -6,37 +6,45 @@
 // https://opensource.org/licenses/MIT.
 
 import 'dart:async';
-import 'dart:developer';
 
 import 'package:bloc/bloc.dart';
+import 'package:bloc_logger/bloc_logger.dart';
 import 'package:flutter/widgets.dart';
-
-class AppBlocObserver extends BlocObserver {
-  @override
-  void onChange(BlocBase<dynamic> bloc, Change<dynamic> change) {
-    super.onChange(bloc, change);
-    log('onChange(${bloc.runtimeType}, $change)');
-  }
-
-  @override
-  void onError(BlocBase<dynamic> bloc, Object error, StackTrace stackTrace) {
-    log('onError(${bloc.runtimeType}, $error, $stackTrace)');
-    super.onError(bloc, error, stackTrace);
-  }
-}
+import 'package:flutter_native_splash/flutter_native_splash.dart';
+import 'package:my_app/injection/injection.dart';
+import 'package:my_app/utils/utils.dart';
 
 Future<void> bootstrap(FutureOr<Widget> Function() builder) async {
+  final widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+
+  // Keep splash open
+  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
+
+  // setup GetIt
+  configureDependencies();
+
+  // close splash
+  FlutterNativeSplash.remove();
+
+  // setup logger
+  final blocLogger = getLogger('BLOC', usePrettyPrinter: true);
+  final globalLogger = getLogger('GLOBAL');
+
   FlutterError.onError = (details) {
-    log(details.exceptionAsString(), stackTrace: details.stack);
+    globalLogger.e(
+      details.exceptionAsString(),
+      details.exception,
+      details.stack,
+    );
   };
 
   await runZonedGuarded(
     () async {
       await BlocOverrides.runZoned(
         () async => runApp(await builder()),
-        blocObserver: AppBlocObserver(),
+        blocObserver: LoggerBlocObserver(logger: blocLogger),
       );
     },
-    (error, stackTrace) => log(error.toString(), stackTrace: stackTrace),
+    (error, stackTrace) => globalLogger.e(error.toString(), error, stackTrace),
   );
 }

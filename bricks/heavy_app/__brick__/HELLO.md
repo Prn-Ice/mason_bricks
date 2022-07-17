@@ -1,1 +1,0 @@
-Hello heavy_app! 👋

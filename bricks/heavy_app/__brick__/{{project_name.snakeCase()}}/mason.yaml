@@ -1,0 +1,6 @@
+bricks:
+  hello: 0.1.0+1
+  annoying_analysis_options: ^0.0.1
+  feature_brick: ^0.4.0
+  app_ui: ^0.0.4
+  heavy_repository_package: ^0.1.2
