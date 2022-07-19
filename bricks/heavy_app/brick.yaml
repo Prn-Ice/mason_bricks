@@ -1,5 +1,5 @@
 name: heavy_app
-description: Core Very Good Flutter App
+description: A starter Flutter App with routing, dependency injection, pre-commit hooks and more.
 version: 0.1.0+1
 environment:
   mason: any
