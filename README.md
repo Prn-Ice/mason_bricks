@@ -24,6 +24,7 @@ My collection of bricks to help you build projects faster or nothing else will ð
 | [heavy_service_package](https://brickhub.dev/bricks/heavy_service_package/0.0.1) | A brick to create your service package including methods, models, tests, and more! | 0.0.1   |
 | [heavy_repository_package](https://brickhub.dev/bricks/heavy_repository_package/0.1.2) | A brick that generates a repository package with an api client, data persistence and more.. | 0.1.2   |
 | [heavy_app](https://brickhub.dev/bricks/heavy_app/0.0.1)     | A starter Flutter App with routing, dependency injection, pre-commit hooks and more.. | 0.0.1   |
+| [cloud_messaging_service_package](https://brickhub.dev/bricks/cloud_messaging_service_package/0.0.1) | A brick that generates a Firebase cloud messaging flutter project with useful functions for listening to, displaying and handling notifications. | 0.0.1   |
 | form_bloc                                                    | Coming soon...                                               | N/A     |
 
 ## Documentation
@@ -34,6 +35,7 @@ My collection of bricks to help you build projects faster or nothing else will ð
 - [heavy_service_package](https://github.com/Prn-Ice/mason_bricks/tree/main/bricks/heavy_service_package)
 - [heavy_repository_package](https://github.com/Prn-Ice/mason_bricks/tree/main/bricks/heavy_repository_package)
 - [heavy_app](https://github.com/Prn-Ice/mason_bricks/tree/main/bricks/heavy_app)
+- [cloud_messaging_service_package](https://github.com/Prn-Ice/mason_bricks/tree/main/bricks/cloud_messaging_service_package)
 
 ## Maintainers
 

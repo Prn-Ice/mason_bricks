@@ -11,3 +11,5 @@ bricks:
     path: bricks/heavy_repository_package
   heavy_app:
     path: bricks/heavy_app
+  cloud_messaging_service_package:
+    path: bricks/cloud_messaging_service_package
