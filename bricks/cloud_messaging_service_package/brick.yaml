@@ -1,4 +1,4 @@
 name: cloud_messaging_service_package
-description: A brick that generates a Firebase cloud messaging flutter project with useful functions for listening to, displaying and handling notifications.
+description: A brick that generates a Firebase cloud messaging flutter project with useful functions.
 repository: https://github.com/Prn-Ice/mason_bricks/tree/main/bricks/cloud_messaging_service_package
 version: 0.0.1
