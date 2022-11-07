@@ -10,12 +10,15 @@ analyzer:
   exclude:
     - "**/*.g.dart"
     - "**/*.freezed.dart"
-    - "**/models/**"
     - "lib/injection/ioc.config.dart"
+    - "lib/firebase_options_dev.dart"
+    - "lib/firebase_options.dart"
   errors:
     invalid_annotation_target: ignore
     unnecessary_import: ignore
     always_use_package_imports: ignore
+    sort_pub_dependencies: ignore
+    directives_ordering: ignore
 
 dart_code_metrics:
   metrics:

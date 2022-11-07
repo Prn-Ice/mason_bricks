@@ -18,7 +18,7 @@ My collection of bricks to help you build projects faster or nothing else will ð
 
 | Brick                                                        | Description                                                  | Version |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------- |
-| [annoying_analysis_options](https://brickhub.dev/bricks/annoying_analysis_options/0.0.1) | A brick create a very strict `analysis_options.yaml` file using `very_good_analysis` and `dart_code_metrics`. | 0.0.1   |
+| [annoying_analysis_options](https://brickhub.dev/bricks/annoying_analysis_options/0.0.2) | A brick create a very strict `analysis_options.yaml` file using `very_good_analysis` and `dart_code_metrics`. | 0.0.2   |
 | [model_test](https://brickhub.dev/bricks/model_test/0.0.1)   | A brick to create a test for a dart model class with a `copyWith`, `fromJson` and `toJson`. | 0.0.1   |
 | [brick_starter](https://brickhub.dev/bricks/brick_starter/0.2.0) | It's basically `mason new` with a few more options.          | 0.2.0   |
 | [heavy_service_package](https://brickhub.dev/bricks/heavy_service_package/0.0.1) | A brick to create your service package including methods, models, tests, and more! | 0.0.1   |
