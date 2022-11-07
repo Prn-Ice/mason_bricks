@@ -22,6 +22,7 @@ analyzer:
 
 dart_code_metrics:
   metrics:
+    source-lines-of-code: 50
     cyclomatic-complexity: 20
     maximum-nesting-level: 5
     lines-of-code: 100
@@ -46,7 +47,7 @@ dart_code_metrics:
     - avoid-unrelated-type-assertions
     - binary-expression-operand-order
     - double-literal-format
-    - member-ordering-extended:
+    - member-ordering:
         exclude:
           - '**/models/**'
         order:
