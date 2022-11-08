@@ -16,18 +16,18 @@ void main() {
     test('can be instantiated', () {
       expect(MyRepository(cache: MockCache()), isNotNull);
     });
-
-    group('myUser', () {
+    
+    group('getUser', () {
       test('executes happy flow', () async {
-        final someValue = myRepository.myUser();
+        final someValue = myRepository.getUser();
         //expect(someValue, equals(someValue));
       });
 
       test('executes edge flow', () async {
-        final someValue = myRepository.myUser();
+        final someValue = myRepository.getUser();
         //expect(someValue, equals(someValue));
       });
     });
-
+    
   });
 }

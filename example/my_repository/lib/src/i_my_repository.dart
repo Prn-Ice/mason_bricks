@@ -2,15 +2,13 @@ part of 'my_repository.dart';
 
 /// An interface for MyRepository
 abstract class IMyRepository{
-  static const String cacheKey = '__my_repository__';
-
-  /// A description for myUser
-  TaskEither<String, User> myUser();
-
-
+  
+  /// A description for getUser
+  TaskEither<String, String> getUser();
+  
   /// Cached data
-  Future<User?> get userData;
+  User? get userData;
 
   /// Stream of cached data
-  Stream<User?> get userDataStream;
+  DeferStream<User?> get userDataStream;
 }

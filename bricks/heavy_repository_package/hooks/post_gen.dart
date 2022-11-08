@@ -13,7 +13,7 @@ Future<void> run(HookContext context) async {
     final serviceDirectory = '${Directory.current.path}/$recasedPackageName';
     final directory = Directory(serviceDirectory);
     final generator = await MasonGenerator.fromBrick(
-      Brick.version(name: 'annoying_analysis_options', version: '0.0.1'),
+      Brick.version(name: 'annoying_analysis_options', version: '0.0.3'),
     );
 
     await generator.generate(

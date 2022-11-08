@@ -1,9 +1,10 @@
-import 'package:dio/dio.dart';
+import 'package:dio_service/dio_service.dart';
 import 'package:fpdart/fpdart.dart';
 import 'package:my_repository/my_repository.dart';
 import 'package:my_repository/src/client/my_repository_client.dart';
 import 'package:rxdart/rxdart.dart';
-import 'package:stash/stash_api.dart';
+
+import 'local_data_source/local_data_source.dart';
 
 part 'i_my_repository.dart';
 
@@ -13,21 +14,23 @@ part 'i_my_repository.dart';
 class MyRepository implements IMyRepository {
   /// {@macro my_repository}
   MyRepository({
-    required Cache<User> cache,
+    required Box<dynamic> box,
+    required DioService dioService,
     MyRepositoryClient? client,
-  })  : _cache = cache,
-        _client = client ?? MyRepositoryClient(Dio());
+    LocalDataSource? localDataSource,
+  })  : _client = client ?? MyRepositoryClient(Dio()), 
+        _localDataSource = localDataSource ?? LocalDataSource(box: box);
 
-  final Cache<User> _cache;
   final MyRepositoryClient _client;
+  final LocalDataSource _localDataSource;
 
   @override
-  TaskEither<String, User> myUser() {
+  TaskEither<String, String> getUser() {
     //TODO: Add Logic
     return TaskEither<String, User>.tryCatch(
       () async {
         final response = await _client.getUser();
-        await _cache.put(IMyRepository.cacheKey, response);
+        await _cache.put(LocalDataSource.key, response);
 
         return response;
       },
@@ -37,16 +40,11 @@ class MyRepository implements IMyRepository {
 
   @override
   Future<User?> get userData {
-    return _cache.get(IMyRepository.cacheKey);
+    return _localDataSource.user;
   }
 
   @override
-  Stream<User?> get userDataStream async* {
-    final initial = await userData;
-
-    yield* _cache
-        .on<CacheEntryUpdatedEvent<User>>()
-        .map((event) => event.newEntry.value as User?)
-        .shareValueSeeded(initial);
+  DeferStream<User?> get userDataStream {
+    return _localDataSource.userStream;
   }
 }
