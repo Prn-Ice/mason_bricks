@@ -27,7 +27,7 @@ mason make heavy_repository_package --package_name=MyRepository --package_descri
 
 | Brick                                                        | Version |
 | ------------------------------------------------------------ | ------- |
-| [annoying_analysis_options](https://brickhub.dev/bricks/annoying_analysis_options/0.0.1) | 0.0.1   |
+| [annoying_analysis_options](https://brickhub.dev/bricks/annoying_analysis_options/0.0.3) | 0.0.3   |
 
 
 
