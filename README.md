@@ -22,7 +22,7 @@ My collection of bricks to help you build projects faster or nothing else will ð
 | [model_test](https://brickhub.dev/bricks/model_test/0.0.1)   | A brick to create a test for a dart model class with a `copyWith`, `fromJson` and `toJson`. | 0.0.1   |
 | [brick_starter](https://brickhub.dev/bricks/brick_starter/0.2.0) | It's basically `mason new` with a few more options.          | 0.2.0   |
 | [heavy_service_package](https://brickhub.dev/bricks/heavy_service_package/0.0.1) | A brick to create your service package including methods, models, tests, and more! | 0.0.1   |
-| [heavy_repository_package](https://brickhub.dev/bricks/heavy_repository_package/0.2.0) | A brick that generates a repository package with an api client, data persistence and more.. | 0.2.0   |
+| [heavy_repository_package](https://brickhub.dev/bricks/heavy_repository_package/0.2.1) | A brick that generates a repository package with an api client, data persistence and more.. | 0.2.1   |
 | [heavy_app](https://brickhub.dev/bricks/heavy_app/0.2.0)     | A starter Flutter App with routing, dependency injection, pre-commit hooks and more.. | 0.2.0   |
 | [cloud_messaging_service_package](https://brickhub.dev/bricks/cloud_messaging_service_package/0.0.1) | A brick that generates a Firebase cloud messaging flutter project with useful functions for listening to, displaying and handling notifications. | 0.0.1   |
 | form_bloc                                                    | Coming soon...                                               | N/A     |

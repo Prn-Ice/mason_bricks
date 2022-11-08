@@ -9,3 +9,8 @@
 # 0.1.2
 
 - Update docs
+
+# 0.2.1
+
+- Replace caching mechanism
+- Use dio service
