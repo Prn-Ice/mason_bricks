@@ -4,7 +4,7 @@ part of 'my_repository.dart';
 abstract class IMyRepository{
   
   /// A description for getUser
-  TaskEither<String, String> getUser();
+  TaskEither<String, User> getUser();
   
   /// Cached data
   User? get userData;

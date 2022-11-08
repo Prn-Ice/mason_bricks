@@ -10,7 +10,7 @@ dependencies:{{#analysis}}
   dart_code_metrics: ^4.17.1{{/analysis}}
   dio: ^4.0.6
   dio_service:
-    path: ../dio_service
+    git: https://github.com/Prn-Ice/dio_service.git
   equatable: ^2.0.3
   fast_immutable_collections: ^7.4.1
   fpdart: ^0.3.0{{#flutter}}
@@ -20,7 +20,7 @@ dependencies:{{#analysis}}
   freezer: ^0.6.1
   hive: ^2.2.3
   hive_repository:
-    path: ../hive_repository
+    git: https://github.com/Prn-Ice/hive_repository.git
   json_annotation: ^4.6.0
   json_serializable: ^6.3.1
   retrofit: ^3.0.1+1

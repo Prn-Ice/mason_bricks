@@ -1,4 +1,3 @@
-import 'package:hive/hive.dart';
 import 'package:hive_repository/hive_repository.dart';
 import 'package:rxdart/rxdart.dart';
 

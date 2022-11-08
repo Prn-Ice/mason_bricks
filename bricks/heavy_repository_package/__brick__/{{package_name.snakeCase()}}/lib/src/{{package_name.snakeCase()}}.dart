@@ -19,7 +19,7 @@ class {{package_name.pascalCase()}} implements I{{package_name.pascalCase()}} {
     required DioService dioService,
     {{package_name.pascalCase()}}Client? client,
     LocalDataSource? localDataSource,
-  })  : _client = client ?? {{package_name.pascalCase()}}Client(Dio()), 
+  })  : _client = client ?? {{package_name.pascalCase()}}Client(dioService.dio), 
         _localDataSource = localDataSource ?? LocalDataSource(box: box);
 
   final {{package_name.pascalCase()}}Client _client;
@@ -40,7 +40,7 @@ class {{package_name.pascalCase()}} implements I{{package_name.pascalCase()}} {
   }
 {{/methods}}
   @override
-  Future<User?> get userData {
+  User? get userData {
     return _localDataSource.user;
   }
 

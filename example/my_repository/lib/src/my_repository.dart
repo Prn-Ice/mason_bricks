@@ -1,5 +1,6 @@
 import 'package:dio_service/dio_service.dart';
 import 'package:fpdart/fpdart.dart';
+import 'package:hive/hive.dart';
 import 'package:my_repository/my_repository.dart';
 import 'package:my_repository/src/client/my_repository_client.dart';
 import 'package:rxdart/rxdart.dart';
@@ -18,19 +19,19 @@ class MyRepository implements IMyRepository {
     required DioService dioService,
     MyRepositoryClient? client,
     LocalDataSource? localDataSource,
-  })  : _client = client ?? MyRepositoryClient(Dio()), 
+  })  : _client = client ?? MyRepositoryClient(dioService.dio), 
         _localDataSource = localDataSource ?? LocalDataSource(box: box);
 
   final MyRepositoryClient _client;
   final LocalDataSource _localDataSource;
 
   @override
-  TaskEither<String, String> getUser() {
+  TaskEither<String, User> getUser() {
     //TODO: Add Logic
     return TaskEither<String, User>.tryCatch(
       () async {
         final response = await _client.getUser();
-        await _cache.put(LocalDataSource.key, response);
+        await _localDataSource.put(LocalDataSource.key, response);
 
         return response;
       },
@@ -39,7 +40,7 @@ class MyRepository implements IMyRepository {
   }
 
   @override
-  Future<User?> get userData {
+  User? get userData {
     return _localDataSource.user;
   }
 

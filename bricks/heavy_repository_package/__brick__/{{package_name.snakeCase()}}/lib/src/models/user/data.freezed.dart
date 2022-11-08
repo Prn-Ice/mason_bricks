@@ -31,33 +31,37 @@ mixin _$Data {
 /// @nodoc
 abstract class $DataCopyWith<$Res> {
   factory $DataCopyWith(Data value, $Res Function(Data) then) =
-      _$DataCopyWithImpl<$Res>;
+      _$DataCopyWithImpl<$Res, Data>;
+  @useResult
   $Res call({String? firstName, String? lastName});
 }
 
 /// @nodoc
-class _$DataCopyWithImpl<$Res> implements $DataCopyWith<$Res> {
+class _$DataCopyWithImpl<$Res, $Val extends Data>
+    implements $DataCopyWith<$Res> {
   _$DataCopyWithImpl(this._value, this._then);
 
-  final Data _value;
   // ignore: unused_field
-  final $Res Function(Data) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? firstName = freezed,
     Object? lastName = freezed,
   }) {
     return _then(_value.copyWith(
-      firstName: firstName == freezed
+      firstName: freezed == firstName
           ? _value.firstName
           : firstName // ignore: cast_nullable_to_non_nullable
               as String?,
-      lastName: lastName == freezed
+      lastName: freezed == lastName
           ? _value.lastName
           : lastName // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -66,29 +70,28 @@ abstract class _$$_DataCopyWith<$Res> implements $DataCopyWith<$Res> {
   factory _$$_DataCopyWith(_$_Data value, $Res Function(_$_Data) then) =
       __$$_DataCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String? firstName, String? lastName});
 }
 
 /// @nodoc
-class __$$_DataCopyWithImpl<$Res> extends _$DataCopyWithImpl<$Res>
+class __$$_DataCopyWithImpl<$Res> extends _$DataCopyWithImpl<$Res, _$_Data>
     implements _$$_DataCopyWith<$Res> {
   __$$_DataCopyWithImpl(_$_Data _value, $Res Function(_$_Data) _then)
-      : super(_value, (v) => _then(v as _$_Data));
+      : super(_value, _then);
 
-  @override
-  _$_Data get _value => super._value as _$_Data;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? firstName = freezed,
     Object? lastName = freezed,
   }) {
     return _then(_$_Data(
-      firstName: firstName == freezed
+      firstName: freezed == firstName
           ? _value.firstName
           : firstName // ignore: cast_nullable_to_non_nullable
               as String?,
-      lastName: lastName == freezed
+      lastName: freezed == lastName
           ? _value.lastName
           : lastName // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -99,7 +102,7 @@ class __$$_DataCopyWithImpl<$Res> extends _$DataCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Data implements _Data {
-  _$_Data({this.firstName, this.lastName});
+  const _$_Data({this.firstName, this.lastName});
 
   factory _$_Data.fromJson(Map<String, dynamic> json) => _$$_DataFromJson(json);
 
@@ -118,30 +121,33 @@ class _$_Data implements _Data {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Data &&
-            const DeepCollectionEquality().equals(other.firstName, firstName) &&
-            const DeepCollectionEquality().equals(other.lastName, lastName));
+            (identical(other.firstName, firstName) ||
+                other.firstName == firstName) &&
+            (identical(other.lastName, lastName) ||
+                other.lastName == lastName));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(firstName),
-      const DeepCollectionEquality().hash(lastName));
+  int get hashCode => Object.hash(runtimeType, firstName, lastName);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_DataCopyWith<_$_Data> get copyWith =>
       __$$_DataCopyWithImpl<_$_Data>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DataToJson(this);
+    return _$$_DataToJson(
+      this,
+    );
   }
 }
 
 abstract class _Data implements Data {
-  factory _Data({final String? firstName, final String? lastName}) = _$_Data;
+  const factory _Data({final String? firstName, final String? lastName}) =
+      _$_Data;
 
   factory _Data.fromJson(Map<String, dynamic> json) = _$_Data.fromJson;
 

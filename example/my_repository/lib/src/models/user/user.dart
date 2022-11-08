@@ -1,4 +1,5 @@
-import 'package:collection/collection.dart';
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import 'data.dart';
@@ -6,13 +7,18 @@ import 'data.dart';
 part 'user.freezed.dart';
 part 'user.g.dart';
 
+// **************************************************************************
+// FreezerGenerator
+// **************************************************************************
+
 @freezed
 class User with _$User {
-  factory User({
+  const factory User({
     String? status,
     String? message,
     Data? data,
   }) = _User;
 
-  factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
+  /// Returns [User] based on [json].
+  factory User.fromJson(Map<String, Object?> json) => _$UserFromJson(json);
 }

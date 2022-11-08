@@ -2,7 +2,12 @@
 
 A brick that generates a repository package with an api client, data persistence and more..
 
+## NOTE
+The project has been updated but I don't have the time to update the doc right now so heres a brief of what you know.
 
+- Use a [hive_repository](https://github.com/Prn-Ice/hive_repository) over the stash package
+- Use a [dio_service](https://github.com/Prn-Ice/dio_service)
+- Use [freezer](https://pub.dev/packages/freezer) instead of json_model
 
 ## How to use 🚀
 
