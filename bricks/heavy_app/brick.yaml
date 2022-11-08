@@ -19,3 +19,4 @@ vars:
     description: A short project description
     default: A Very Good App
     prompt: "What is the project description?"
+    
