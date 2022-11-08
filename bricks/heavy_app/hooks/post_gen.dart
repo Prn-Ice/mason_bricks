@@ -15,18 +15,20 @@ Future<void> run(HookContext context) async {
   await _runPreCommitInstall(logger, directory);
   // Run pre-commit install --hook-type commit-msg
   await _runPreCommitInstallHooks(logger, directory);
+  // Run pre-commit run --all-files
+  await _runPreCommitRunAllFiles(logger, directory);
   // Run flutter pub run rename -b bundle_id
   await _runGenerateAppUI(context, directory);
   // Run flutter pub get
   await _runMelosBootstrap(logger, directory);
+  // Run melos run generate_localization
+  await _runMelosGenerateLocalization(logger, directory);
   // Run dart fix
   await _runDartFixApply(logger, directory);
   // Run flutter pub run build_runner build --delete-conflicting-outputs
   await _runBuildRunner(logger, directory);
   // Run flutter pub run flutter_native_splash:create
   await _runFlutterCreateSplash(logger, directory);
-  // Run flutter pub run rename -b bundle_id
-  await _runRename(context, directory);
 
   _logSummary(logger);
 }
@@ -52,6 +54,20 @@ Future<void> _runMelosBootstrap(Logger logger, Directory directory) async {
   );
 }
 
+Future<void> _runMelosGenerateLocalization(
+  Logger logger,
+  Directory directory,
+) async {
+  await _runCommand(
+    logger: logger,
+    directory: directory,
+    runningCommand: 'melos run generate_localization',
+    executable: 'melos',
+    arguments: ['run', 'generate_localization'],
+    errorText: 'Make sure you have melos installed.',
+  );
+}
+
 Future<void> _runGenerateAppUI(HookContext context, Directory directory) async {
   final logger = context.logger;
   final projectName = context.vars['project_name'];
@@ -73,19 +89,6 @@ Future<void> _runGenerateAppUI(HookContext context, Directory directory) async {
   progress.complete();
 }
 
-Future<void> _runRename(HookContext context, Directory directory) async {
-  final logger = context.logger;
-  final bundleId = context.vars['org_name'];
-
-  await _runCommand(
-    logger: logger,
-    directory: directory,
-    runningCommand: 'flutter pub run rename --bundleId $bundleId',
-    executable: 'flutter',
-    arguments: ['pub', 'run', 'rename', '--bundleId', bundleId],
-  );
-}
-
 Future<void> _runBuildRunner(
   Logger logger,
   Directory directory,
@@ -93,11 +96,10 @@ Future<void> _runBuildRunner(
   await _runCommand(
     logger: logger,
     directory: directory,
-    runningCommand: 'flutter pub run build_runner build '
+    runningCommand: 'dart run build_runner build '
         '--delete-conflicting-outputs',
-    executable: 'flutter',
+    executable: 'dart',
     arguments: [
-      'pub',
       'run',
       'build_runner',
       'build',
@@ -140,6 +142,18 @@ Future<void> _runPreCommitInstall(Logger logger, Directory directory) async {
     runningCommand: 'pre-commit install',
     executable: 'pre-commit',
     arguments: ['install'],
+    errorText: 'Make sure you have pre-commit installed.',
+  );
+}
+
+Future<void> _runPreCommitRunAllFiles(
+    Logger logger, Directory directory) async {
+  await _runCommand(
+    logger: logger,
+    directory: directory,
+    runningCommand: 'pre-commit run --all-files',
+    executable: 'pre-commit',
+    arguments: ['run', '--all-files'],
     errorText: 'Make sure you have pre-commit installed.',
   );
 }

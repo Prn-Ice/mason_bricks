@@ -22,7 +22,7 @@ analyzer:
 
 dart_code_metrics:
   metrics:
-    source-lines-of-code: 50
+    source-lines-of-code: 60
     cyclomatic-complexity: 20
     maximum-nesting-level: 5
     lines-of-code: 100

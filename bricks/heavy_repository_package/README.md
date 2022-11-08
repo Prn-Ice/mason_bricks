@@ -110,7 +110,7 @@ abstract class MyRepositoryClient {
 
 ### Repository
 
-This template assumes you prefer to use [functional programming](https://pub.dev/packages/fpdart) types and methods such as the `Either` type to handle errors, instead of the traditional `try-catch` system. 
+This template assumes you prefer to use [functional programming](https://pub.dev/packages/fpdart) types and methods such as the `Either` type to handle errors, instead of the traditional `try-catch` system.
 
 It also assumes that you use [stash](https://pub.dev/packages/stash) to cache responses from the `Client`.
 
@@ -158,8 +158,8 @@ class MyRepository implements IMyRepository {
   Future<User?> get userData {
     return _cache.get(IMyRepository.cacheKey);
   }
-	
-  /// Cached data accessible as a stream 
+
+  /// Cached data accessible as a stream
   /// with the value from [userData] injected as the initial data.
   @override
   Stream<User?> get userDataStream async* {
@@ -179,7 +179,7 @@ class MyRepository implements IMyRepository {
 
 ```dart
 void main() {
-  // Create a store, 
+  // Create a store,
   // you can create multiple caches from one store.
   final store = await newObjectboxLocalCacheStore();
   // Create a cache for users.
@@ -187,7 +187,7 @@ void main() {
       name: 'user',
       fromEncodable: User.fromJson,
   );
-  
+
   // Create a repository with cache.
   final repository = MyRepository(cache: cache);
 }

@@ -5,46 +5,42 @@
 // license that can be found in the LICENSE file or at
 // https://opensource.org/licenses/MIT.
 
+// Flutter imports:
+import 'package:flutter/material.dart';
+
+// Package imports:
+import 'package:easy_localization/easy_localization.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
+
+// Project imports:
+import 'package:my_app/features/counter/counter.dart';
+import 'package:my_app/gen/locale_keys.g.dart';
+
 // ignore_for_file: prefer-single-widget-per-file
 
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:my_app/features/counter/counter.dart';
-import 'package:my_app/l10n/l10n.dart';
-
-class CounterPage extends StatelessWidget {
+class CounterPage extends ConsumerWidget {
   const CounterPage({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (_) => CounterCubit(),
-      child: const CounterView(),
-    );
-  }
-}
-
-class CounterView extends StatelessWidget {
-  const CounterView({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    final l10n = context.l10n;
-
+  Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
-      appBar: AppBar(title: Text(l10n.counterAppBarTitle)),
+      appBar: AppBar(title: const Text(LocaleKeys.counter_appBarTitle).tr()),
       body: const Center(child: CounterText()),
       floatingActionButton: Column(
         mainAxisAlignment: MainAxisAlignment.end,
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           FloatingActionButton(
-            onPressed: () => context.read<CounterCubit>().increment(),
+            onPressed: () {
+              ref.read(CounterCubit.provider.bloc).increment();
+            },
             child: const Icon(Icons.add),
           ),
           const SizedBox(height: 8),
           FloatingActionButton(
-            onPressed: () => context.read<CounterCubit>().decrement(),
+            onPressed: () {
+              ref.read(CounterCubit.provider.bloc).decrement();
+            },
             child: const Icon(Icons.remove),
           ),
         ],
@@ -53,13 +49,13 @@ class CounterView extends StatelessWidget {
   }
 }
 
-class CounterText extends StatelessWidget {
+class CounterText extends ConsumerWidget {
   const CounterText({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final theme = Theme.of(context);
-    final count = context.select((CounterCubit cubit) => cubit.state);
+    final count = ref.watch(CounterCubit.provider);
 
     return Text('$count', style: theme.textTheme.headline1);
   }

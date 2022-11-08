@@ -1,12 +1,16 @@
-# melos_managed_dependency_overrides: async,clock,meta,path,auto_route_observer,bloc_logger,app_ui
+# melos_managed_dependency_overrides: auto_route_observer,bloc_logger,app_ui,crashlytics_service,flitaa_extensions,hive_service,riverpod_logger
 dependency_overrides:
-  async: 2.8.2
-  clock: 1.1.0
-  meta: 1.7.0
-  path: 1.8.1
+  app_ui:
+    path: packages/app_ui
   auto_route_observer:
     path: packages/auto_route_observer
   bloc_logger:
     path: packages/bloc_logger
-  app_ui:
-    path: packages/app_ui
+  crashlytics_service:
+    path: packages/crashlytics_service
+  flitaa_extensions:
+    path: packages/flitaa_extensions
+  hive_service:
+    path: packages/hive_service
+  riverpod_logger:
+    path: packages/riverpod_logger

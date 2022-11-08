@@ -1,7 +1,7 @@
 part of '{{package_name.snakeCase()}}.dart';
 
 /// An interface for {{package_name.pascalCase()}}
-abstract class I{{package_name.pascalCase()}}{ 
+abstract class I{{package_name.pascalCase()}}{
   static const String cacheKey = '__{{package_name.snakeCase()}}__';
   {{#methods}}
   /// A description for {{name}}

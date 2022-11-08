@@ -10,7 +10,7 @@ part 'i_{{package_name.snakeCase()}}.dart';
 /// {@template {{{package_name.snakeCase()}}}}
 /// {{package_name.pascalCase()}} description
 /// {@endtemplate}
-class {{package_name.pascalCase()}} implements I{{package_name.pascalCase()}} { 
+class {{package_name.pascalCase()}} implements I{{package_name.pascalCase()}} {
   /// {@macro {{{package_name.snakeCase()}}}}
   {{package_name.pascalCase()}}({
     required Cache<User> cache,

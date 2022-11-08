@@ -1,0 +1,7 @@
+{
+  "email": "Email",
+  "password": "Password",
+  "counter": {
+    "appBarTitle": "Counter"
+  }
+}

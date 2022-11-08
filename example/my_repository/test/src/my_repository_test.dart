@@ -16,7 +16,7 @@ void main() {
     test('can be instantiated', () {
       expect(MyRepository(cache: MockCache()), isNotNull);
     });
-    
+
     group('myUser', () {
       test('executes happy flow', () async {
         final someValue = myRepository.myUser();
@@ -28,6 +28,6 @@ void main() {
         //expect(someValue, equals(someValue));
       });
     });
-    
+
   });
 }

@@ -1,0 +1,1 @@
+class HiveInitializationException implements Exception {}

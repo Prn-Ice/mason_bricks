@@ -1,81 +1,84 @@
 name: my_app
 description: A Very Good App
-version: 1.0.0+1
+version: 0.1.0+1
 publish_to: none
 
 environment:
-  sdk: ">=2.17.0 <3.0.0"
-  flutter: 3.0.4
+  sdk: ">=2.18.0 <3.0.0"
+  flutter: 3.3.7
 
 dependencies:
   app_ui:
-  bloc: ^8.0.3
-  cached_network_image: ^3.2.1
-  dots_indicator: ^2.1.0
-  dropdown_button2: ^1.6.3
-  equatable: ^2.0.3
-  expandable_page_view: ^1.0.17
-  fast_immutable_collections: ^7.4.1
   flutter:
     sdk: flutter
-  flutter_localizations:
-    sdk: flutter
-  flutter_screenutil: "^5.5.3+2"
+  flutter_screenutil: ^5.5.3+2
   flutter_svg: ^1.1.1+1
-  fpdart: ^0.1.0
-  humanizer: ^2.0.0
-  intl: ^0.17.0
-  nil: ^1.1.1
-  objectbox_flutter_libs: ^1.6.0
-  skeleton_animation: ^0.1.4
 
   # analytics
-  dart_code_metrics: ^4.16.0
+  dart_code_metrics: ^4.17.1
 
   # db
-  stash: ^4.3.0
-  stash_objectbox: ^4.3.0
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  hive_service:
 
   # form utils
+  flutter_libphonenumber: ^1.2.4
   formz: ^0.4.1
+  pin_code_fields: ^7.4.0
+  validators: ^3.0.0
 
   # logger
   auto_route_observer:
   bloc_logger:
+  riverpod_logger:
 
   # repository
 
+  # services
+  crashlytics_service:
+
   # routing
-  auto_route: "^4.2.1"
+  auto_route: ^5.0.1
 
   # state management
-  flutter_bloc: "^8.0.1"
+  bloc: ^8.1.0
+  flutter_bloc: ^8.1.1
   flutter_hooks: ^0.18.5+1
-  get_it: "^7.2.0"
-  platform_info: ^3.2.0
-  auto_size_text: ^3.0.0
+  get_it: ^7.2.0
+  hooks_riverpod: ^2.1.1
+  injectable: ^1.5.4
+  riverbloc: ^2.0.0
 
-dependency_overrides:
-  async: 2.8.2
-  clock: 1.1.0
-  meta: 1.7.0
-  path: 1.8.1
+  # utils
+  auto_size_text: ^3.0.0
+  easy_localization: ^3.0.1
+  easy_logger: ^0.0.2
+  equatable: ^2.0.3
+  fast_immutable_collections: ^7.4.1
+  feedback: ^2.5.0
+  flitaa_extensions:
+  flutter_native_splash: ^2.2.14
+  fpdart: ^0.3.0
+  humanizer: ^2.0.0
+  intl: ^0.17.0
+  logger: ^1.1.0
+  platform_info: ^3.2.0
+  stack_trace: ^1.10.0
 
 dev_dependencies:
-  auto_route_generator: "^4.0.0"
-  bloc_test: ^9.0.3
-  build_runner: "^2.1.11"
-  flutter_gen_runner: ^4.3.0
-  flutter_native_splash: "^2.2.3+1"
+  auto_route_generator: ^5.0.2
+  bloc_test: ^9.1.0
+  build_runner: ^2.2.1
+  flutter_gen_runner: ^5.0.1
   flutter_test:
     sdk: flutter
-  injectable_generator: "^1.5.3"
+  import_sorter: ^4.6.0
+  injectable_generator: ^1.5.4
   mocktail: ^0.3.0
-  rename:
-    git:
-      url: https://github.com/Prn-Ice/rename.git
-  very_good_analysis: ^3.0.1
+  very_good_analysis: ^3.1.0
 
 flutter:
   uses-material-design: true
-  generate: true
+  assets:
+    - assets/translations/

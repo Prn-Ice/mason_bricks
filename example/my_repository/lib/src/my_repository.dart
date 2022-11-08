@@ -10,7 +10,7 @@ part 'i_my_repository.dart';
 /// {@template my_repository}
 /// MyRepository description
 /// {@endtemplate}
-class MyRepository implements IMyRepository { 
+class MyRepository implements IMyRepository {
   /// {@macro my_repository}
   MyRepository({
     required Cache<User> cache,

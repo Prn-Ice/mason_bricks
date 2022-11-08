@@ -12,6 +12,6 @@ void main() {
     test('can be instantiated', () {
       expect(const ServiceClass(), isNotNull);
     });
-    
+
   });
 }

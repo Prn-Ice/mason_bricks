@@ -203,7 +203,7 @@ class CloudMessagingService {
 void main() {
   // Create instance of service
   final cloudMessagingService = CloudMessagingService();
-  
+
   // Optionally, inject with you favorite DI package
    getIt.registerSingleton<CloudMessagingService>(cloudMessagingService);
 }
@@ -215,7 +215,7 @@ void main() {
 
 - This package assumes you have Firebase set up for the flutter project it will be used in. To learn how to setup firebase see the [docs](https://firebase.google.com/docs/flutter/setup).
 
-- To make sure the correct notification icon is displayed: In your `AndroidManifest.xml` make sure to add 
+- To make sure the correct notification icon is displayed: In your `AndroidManifest.xml` make sure to add
 
   ```xml
   <meta-data android:name="com.google.firebase.messaging.default_notification_icon" android:resource="@drawable/ic_notification" />
@@ -223,6 +223,6 @@ void main() {
           <meta-data android:name="com.google.firebase.messaging.default_notification_channel_id" android:value="high_importance_channel" />
   ```
 
-  In the `application` section. 
+  In the `application` section.
 
   Also make sure you have generated a notification icon with the name `ic_notification`. See [here](https://developer.android.com/studio/write/image-asset-studio) for information on generating notification icons.

@@ -1,4 +1,4 @@
-package {{#dotCase}}{{org_name}}{{/dotCase}}.{{#snakeCase}}{{project_name}}{{/snakeCase}}
+package {{#dotCase}}{{org_name}}{{/dotCase}}
 
 import io.flutter.embedding.android.FlutterActivity
 

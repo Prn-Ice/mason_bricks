@@ -89,11 +89,11 @@ BEGIN
     BEGIN
         BLOCK "040904e4"
         BEGIN
-            VALUE "CompanyName", "{{#dotCase}}{{org_name}}{{/dotCase}}.{{#paramCase}}{{project_name}}{{/paramCase}}" "\0"
+            VALUE "CompanyName", "{{#dotCase}}{{org_name}}{{/dotCase}}" "\0"
             VALUE "FileDescription", "{{#snakeCase}}{{project_name}}{{/snakeCase}}" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
             VALUE "InternalName", "{{#snakeCase}}{{project_name}}{{/snakeCase}}" "\0"
-            VALUE "LegalCopyright", "Copyright (C) 2022 {{#dotCase}}{{org_name}}{{/dotCase}}.{{#paramCase}}{{project_name}}{{/paramCase}}. All rights reserved." "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2022 {{#dotCase}}{{org_name}}{{/dotCase}}. All rights reserved." "\0"
             VALUE "OriginalFilename", "{{#snakeCase}}{{project_name}}{{/snakeCase}}.exe" "\0"
             VALUE "ProductName", "{{#titleCase}}{{project_name}}{{/titleCase}}" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"

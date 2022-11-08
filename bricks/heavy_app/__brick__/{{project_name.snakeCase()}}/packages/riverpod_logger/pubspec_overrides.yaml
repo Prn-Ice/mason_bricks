@@ -1,0 +1,4 @@
+# melos_managed_dependency_overrides: crashlytics_service
+dependency_overrides:
+  crashlytics_service:
+    path: ../crashlytics_service
