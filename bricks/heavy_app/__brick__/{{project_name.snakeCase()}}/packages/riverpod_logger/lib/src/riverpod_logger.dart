@@ -1,6 +1,6 @@
 import 'package:crashlytics_service/crashlytics_service.dart';
-import 'package:logger/logger.dart';
 import 'package:riverpod/riverpod.dart';
+import 'package:talker/talker.dart';
 
 /// {@template riverpod_logger}
 /// Dart package for a riverpod observer that prints output using logger.
@@ -8,12 +8,12 @@ import 'package:riverpod/riverpod.dart';
 class RiverpodLogger extends ProviderObserver {
   /// {@macro riverpod_logger}
   RiverpodLogger({
-    Logger? logger,
     required CrashlyticsService crashlyticsService,
-  })  : _logger = logger ?? Logger(),
+    Talker? logger,
+  })  : _logger = logger ?? Talker(),
         _crashlyticsService = crashlyticsService;
 
-  final Logger _logger;
+  final Talker _logger;
   final CrashlyticsService _crashlyticsService;
 
   @override
@@ -29,7 +29,7 @@ class RiverpodLogger extends ProviderObserver {
       return;
     }
 
-    _logger.v('$providerName created');
+    _logger.verbose('$providerName created');
     _crashlyticsService.log('$providerName created');
   }
 
@@ -53,7 +53,7 @@ class RiverpodLogger extends ProviderObserver {
       'previousValue': '$previousValue',
       'newValue': '$newValue',
     };
-    _logger.v(log);
+    _logger.verbose(log);
     _crashlyticsService.log(log.toString());
   }
 
@@ -71,7 +71,7 @@ class RiverpodLogger extends ProviderObserver {
 
     final message = '${provider.name ?? provider.runtimeType} disposed';
 
-    _logger.v(message);
+    _logger.verbose(message);
     _crashlyticsService.log(message);
   }
 }

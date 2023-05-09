@@ -1,11 +1,19 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:{{#snakeCase}}{{project_name}}{{/snakeCase}}/features/counter/counter.dart';
+import 'app_router.gr.dart';
 
-@CustomAutoRouter(
+@AutoRouterConfig(
   replaceInRouteName: 'Page,Route',
-  transitionsBuilder: TransitionsBuilders.fadeIn,
-  routes: <AutoRoute>[
-    AutoRoute<void>(page: CounterPage),
-  ],
 )
-class $AppRouter {}
+class AppRouter extends $AppRouter {
+  @override
+  RouteType get defaultRouteType {
+    return const RouteType.custom(
+      transitionsBuilder: TransitionsBuilders.fadeIn,
+    );
+  }
+
+  @override
+  final List<AutoRoute> routes = [
+    AutoRoute(page: CounterRoute.page),
+  ];
+}

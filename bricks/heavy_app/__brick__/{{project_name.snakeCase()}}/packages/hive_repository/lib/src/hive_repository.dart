@@ -64,7 +64,6 @@ abstract class BaseHiveRepository<T> {
   /// If [toJson] returns `null`, then nothing will be persisted.
   Map<String, dynamic>? toJson(T item);
 
-  // FIXME:(Prn-Ice): Add tests for functions stolen from HydratedBloc
   T? _fromJson(dynamic json) {
     final dynamic traversedJson = _traverseRead(json);
     final castJson = _cast<Map<String, dynamic>>(traversedJson);

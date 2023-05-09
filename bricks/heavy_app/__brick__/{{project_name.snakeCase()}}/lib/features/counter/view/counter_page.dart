@@ -5,11 +5,12 @@
 // license that can be found in the LICENSE file or at
 // https://opensource.org/licenses/MIT.
 
+// Package imports:
+import 'package:auto_route/auto_route.dart';
+import 'package:easy_localization/easy_localization.dart';
+
 // Flutter imports:
 import 'package:flutter/material.dart';
-
-// Package imports:
-import 'package:easy_localization/easy_localization.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 // Project imports:
@@ -17,7 +18,7 @@ import 'package:{{#snakeCase}}{{project_name}}{{/snakeCase}}/features/counter/co
 import 'package:{{#snakeCase}}{{project_name}}{{/snakeCase}}/gen/locale_keys.g.dart';
 
 // ignore_for_file: prefer-single-widget-per-file
-
+@RoutePage<void>()
 class CounterPage extends ConsumerWidget {
   const CounterPage({super.key});
 
@@ -57,6 +58,6 @@ class CounterText extends ConsumerWidget {
     final theme = Theme.of(context);
     final count = ref.watch(CounterCubit.provider);
 
-    return Text('$count', style: theme.textTheme.headline1);
+    return Text('$count', style: theme.textTheme.displayLarge);
   }
 }

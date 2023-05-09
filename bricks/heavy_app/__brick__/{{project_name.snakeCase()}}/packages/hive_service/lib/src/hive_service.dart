@@ -5,8 +5,8 @@ import 'package:hive_service/hive_service.dart';
 
 class HiveService implements IHiveService {
   HiveService({
-    HiveInterface? hive,
     required String name,
+    HiveInterface? hive,
   })  : _hive = hive ?? Hive,
         _name = name;
 
@@ -30,7 +30,7 @@ class HiveService implements IHiveService {
       await _hive.initFlutter();
       await _hive.openBox<dynamic>(_name);
     } catch (e, s) {
-      log('${e.toString()} unable to initialize hive', error: e, stackTrace: s);
+      log('$e unable to initialize hive', error: e, stackTrace: s);
     }
   }
 }

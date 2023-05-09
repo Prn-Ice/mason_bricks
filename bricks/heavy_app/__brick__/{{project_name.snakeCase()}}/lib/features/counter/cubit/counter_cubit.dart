@@ -6,7 +6,6 @@
 // https://opensource.org/licenses/MIT.
 
 // Package imports:
-import 'package:bloc/bloc.dart';
 import 'package:riverbloc/riverbloc.dart';
 
 class CounterCubit extends Cubit<int> {

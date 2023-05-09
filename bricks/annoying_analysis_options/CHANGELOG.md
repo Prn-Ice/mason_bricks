@@ -9,3 +9,7 @@
 # 0.0.3
 
 - Update to dart_code_metrics v5
+
+# 0.0.4
+
+- Update to dart_code_metrics v5.7.2

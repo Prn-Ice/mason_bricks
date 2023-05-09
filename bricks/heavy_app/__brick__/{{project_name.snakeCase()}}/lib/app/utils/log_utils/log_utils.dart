@@ -1,1 +1,1 @@
-export 'simple_log_printer.dart';
+export 'logger.dart';

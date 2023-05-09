@@ -41,9 +41,7 @@ dart_code_metrics:
     - avoid-unrelated-type-assertions
     - binary-expression-operand-order
     - double-literal-format
-    - member-ordering-extended:
-        exclude:
-          - '**/models/**'
+    - member-ordering:
         order:
           - constructors
           - private-late-final-fields

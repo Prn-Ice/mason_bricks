@@ -4,14 +4,21 @@ import 'package:{{#snakeCase}}{{project_name}}{{/snakeCase}}/app/injection/ioc.c
 
 final GetIt _getIt = GetIt.instance;
 
-@injectableInit
-void configureDependencies({String? environment}) =>
-    $initGetIt(_getIt, environment: environment);
+
+@InjectableInit(
+  preferRelativeImports: true,
+  asExtension: false,
+  throwOnMissingDependencies: true,
+)
+Future<GetIt> configureDependencies({String? environment}) {
+  return init(_getIt, environment: environment);
+}
 
 T resolve<T extends Object>() => _getIt<T>();
 
-T resolveWithParameter<T extends Object, TP>({TP? parameter}) =>
-    _getIt<T>(param1: parameter);
+T resolveWithParameter<T extends Object, TP>({TP? parameter}) {
+  return _getIt<T>(param1: parameter);
+}
 
 GetIt configureTestDependencies() {
   _getIt.reset();

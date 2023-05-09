@@ -11,11 +11,11 @@ dependencies:
   app_ui:
   flutter:
     sdk: flutter
-  flutter_screenutil: ^5.5.3+2
-  flutter_svg: ^1.1.1+1
+  flutter_screenutil: ^5.7.0
+  flutter_svg: ^2.0.5
 
   # analytics
-  dart_code_metrics: ^4.17.1
+  dart_code_metrics: ^5.7.2
 
   # db
   hive: ^2.2.3
@@ -23,60 +23,67 @@ dependencies:
   hive_service:
 
   # form utils
-  flutter_libphonenumber: ^1.2.4
-  formz: ^0.4.1
+  flutter_libphonenumber: ^2.1.2
+  formz: ^0.6.0
   pin_code_fields: ^7.4.0
   validators: ^3.0.0
 
   # logger
-  auto_route_observer:
-  bloc_logger:
+  talker: ^2.4.0
+  talker_bloc_logger: ^1.1.0
+  talker_flutter: ^2.4.3
   riverpod_logger:
+    path: "packages/riverpod_logger"
 
   # repository
 
   # services
   crashlytics_service:
+    path: "packages/crashlytics_service"
 
   # routing
-  auto_route: ^5.0.1
+  auto_route: ^7.1.0
 
   # state management
-  bloc: ^8.1.0
-  flutter_bloc: ^8.1.1
-  flutter_hooks: ^0.18.5+1
-  get_it: ^7.2.0
-  hooks_riverpod: ^2.1.1
-  injectable: ^1.5.4
-  riverbloc: ^2.0.0
+  bloc: ^8.1.1
+  flutter_bloc: ^8.1.2
+  flutter_hooks: ^0.18.6
+  get_it: ^7.5.0
+  hooks_riverpod: ^2.3.6
+  injectable: ^2.1.1
+  riverbloc: ^2.1.0
 
   # utils
   auto_size_text: ^3.0.0
   easy_localization: ^3.0.1
   easy_logger: ^0.0.2
-  equatable: ^2.0.3
-  fast_immutable_collections: ^7.4.1
-  feedback: ^2.5.0
+  equatable: ^2.0.5
+  fast_immutable_collections: ^9.1.1
   flitaa_extensions:
-  flutter_native_splash: ^2.2.14
-  fpdart: ^0.3.0
-  humanizer: ^2.0.0
-  intl: ^0.17.0
-  logger: ^1.1.0
+    path: "packages/flitaa_extensions"
+  flutter_native_splash: ^2.2.19
+  fpdart: ^0.6.0
+  humanizer: ^2.1.0
+  intl: any
+
   platform_info: ^3.2.0
-  stack_trace: ^1.10.0
+  stack_trace: any
+
+dependency_overrides:
+  intl: 0.18.0
 
 dev_dependencies:
-  auto_route_generator: ^5.0.2
-  bloc_test: ^9.1.0
-  build_runner: ^2.2.1
-  flutter_gen_runner: ^5.0.1
+  auto_route_generator: ^7.0.0
+  bloc_test: ^9.1.1
+  build_runner: any
+  flutter_gen_runner: ^5.3.1
   flutter_test:
     sdk: flutter
   import_sorter: ^4.6.0
-  injectable_generator: ^1.5.4
+  injectable_generator: ^2.1.5
+  melos: ^3.0.1
   mocktail: ^0.3.0
-  very_good_analysis: ^3.1.0
+  very_good_analysis: ^4.0.0+1
 
 flutter:
   uses-material-design: true

@@ -8,3 +8,7 @@
 - Use riverbloc over traditional bloc
 - Use hive db over stash
 - Fix issues with organization name
+
+# 0.3.0
+
+- Update package dependencies

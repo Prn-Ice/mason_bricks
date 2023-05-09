@@ -6,12 +6,12 @@
 // https://opensource.org/licenses/MIT.
 
 import 'package:app_ui/app_ui.dart';
-import 'package:auto_route_observer/auto_route_observer.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:{{#snakeCase}}{{project_name}}{{/snakeCase}}/app/app.dart';
+import 'package:talker_flutter/talker_flutter.dart';
 
 class App extends StatelessWidget {
   App({super.key, AppRouter? router}) : _router = router ?? resolve();
@@ -25,9 +25,7 @@ class App extends StatelessWidget {
       minTextAdapt: true,
       builder: (context, child) => MaterialApp.router(
         routerDelegate: _router.delegate(
-          navigatorObservers: () => [
-            AppRouteObserver(logger: getLogger('ROUTER')),
-          ],
+          navigatorObservers: () => [TalkerRouteObserver(logger)],
         ),
         routeInformationParser: _router.defaultRouteParser(),
         localizationsDelegates: context.localizationDelegates,

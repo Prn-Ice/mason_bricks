@@ -1,12 +1,7 @@
 name: {{#snakeCase}}{{project_name}}{{/snakeCase}}
-sdkPath: .fvm/flutter_sdk
 packages:
   - packages/*
   - "."
-
-command:
-  bootstrap:
-    usePubspecOverrides: true
 
 scripts:
   analyze: melos exec -- "dart analyze ."
